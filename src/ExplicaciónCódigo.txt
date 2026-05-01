@@ -1,0 +1,21 @@
+¿Cuál es el recurso compartido?
+
+En este caso es el depósito de cafés (representado por el objeto Depósito), el cual contiene
+una lista de enteros que representan los cafés preparados.
+
+¿Qué clase actúa como monitor?
+
+En este caso el monitor es la clase Deposito. Usando la palabra reservada Synchronized permitimos
+que un único hilo acceda al recurso por vez.
+
+¿Dónde se usan wait() y notifyAll()?
+
+wait() se usa dentro de depsoitarCafe() y retirarCafe() para pausar el hilo en curso si no se
+cumplen las condiciones lógicas (que el depósito esté lleno o que esté vacío)
+
+notifyAll() se ejecuta al final de los métodos para despertar a los demás hilos que están en
+estado de espera.
+
+¿Porqué son necesarios?
+
+Se necesitan para lograr una coordinación segura entre hilos, sino se producirían excepciones.
